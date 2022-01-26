@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedf93ce32a36d44fb782eefa0580d16, type: 3}
+  m_Name: RedPotion
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 21300000, guid: b8aa00cb6da7e3c4198da5f7c978060a, type: 3}
+  _itemPrefab: {fileID: 5403786079671626068, guid: e0cbd9ff6de22ee4e994b3c0b0b928fa, type: 3}
