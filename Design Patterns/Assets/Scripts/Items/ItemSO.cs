@@ -10,8 +10,7 @@ public class ItemSO : ScriptableObject
 
 
     #region Properties
-    public Sprite Sprite => _sprite;
-    public GameObject ItemPrefab => _itemPrefab;
-
+    public Sprite sprite => _sprite;
+    public GameObject itemPrefab => _itemPrefab;
     #endregion
 }

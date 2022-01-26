@@ -6,6 +6,6 @@ public class CamPosition : MonoBehaviour
     int _index;
     [SerializeField]
     Vector3 _rotation;
-    public Vector3 Rotation => _rotation;
-    public int Index { get => _index; set => _index = value; }
+    public Vector3 rotation => _rotation;
+    public int index { get => _index; set => _index = value; }
 }

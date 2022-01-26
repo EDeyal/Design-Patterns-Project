@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
@@ -18,8 +17,7 @@ public class UIHandler : MonoBehaviour
     [SerializeField]
     GameObject _victoryText;
     [SerializeField]
-    float _victoryFadeinTime =3;
-
+    float _victoryFadeInTime =3;
 
     public void AddItemSprite(ItemSO itemSO)
     {
@@ -83,7 +81,7 @@ public class UIHandler : MonoBehaviour
         _victoryText.SetActive(true);
         _victoryBG.SetActive(true);
         var cg = _victoryBG.GetComponent<CanvasGroup>();
-        LeanTween.alphaCanvas(cg, 1, _victoryFadeinTime);
+        LeanTween.alphaCanvas(cg, 1, _victoryFadeInTime);
     }
 
 }

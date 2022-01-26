@@ -16,8 +16,8 @@ public class Room : MonoBehaviour
     #endregion
 
     #region Properties
-    public Dictionary<int ,Door> Exits => _exits;
-    public Dictionary<int, CamPosition> CamPositions
+    public Dictionary<int ,Door> exits => _exits;
+    public Dictionary<int, CamPosition> camPositions
     {
         get
         {
@@ -36,16 +36,16 @@ public class Room : MonoBehaviour
         Debug.Log($"Setting Room: {this}");
         for (int i = 0; i < _roomCamPositions.Length; i++)
         {
-            _roomCamPositions[i].Index = i;
+            _roomCamPositions[i].index = i;
         }
         foreach (var camPos in _roomCamPositions)
         {
-            _camPositions.Add(camPos.Index, camPos);
+            _camPositions.Add(camPos.index, camPos);
         }
     }
     public void ChangeCamPos(bool right)
     {
-        if (CamPositions.Count == 0)
+        if (camPositions.Count == 0)
         {
 
             throw new System.Exception("Room ChangeCamPos has a problem");
@@ -60,19 +60,19 @@ public class Room : MonoBehaviour
             addition = -1;
         }
         int toCamIndex = _currentCameraLocationIndex + addition;
-        if (!CamPositions.ContainsKey(toCamIndex))
+        if (!camPositions.ContainsKey(toCamIndex))
         {
-            if (toCamIndex >= CamPositions.Count)
+            if (toCamIndex >= camPositions.Count)
             {
                 toCamIndex = 0;
             }
             else
             {
-                toCamIndex = CamPositions.Count -1;
+                toCamIndex = camPositions.Count -1;
             }
         }
         CamPosition camPos;
-        CamPositions.TryGetValue(toCamIndex, out camPos);
+        camPositions.TryGetValue(toCamIndex, out camPos);
         SetCamera(camPos);
         _currentCameraLocationIndex = toCamIndex;
     }
@@ -80,11 +80,11 @@ public class Room : MonoBehaviour
     {
         var cam = GameManager.instance.mainCamera.gameObject;
         LeanTween.move(cam, toCam.transform.position,_leanTweenTime);
-        LeanTween.rotate(cam, toCam.Rotation, _leanTweenTime);
+        LeanTween.rotate(cam, toCam.rotation, _leanTweenTime);
     }
     public void OnRoomEntry(CamPosition toCam)
     {
-        _currentCameraLocationIndex = toCam.Index;
+        _currentCameraLocationIndex = toCam.index;
         SetCamera(toCam);
     }
     public void OnRoomExit()

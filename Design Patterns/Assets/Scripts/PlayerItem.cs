@@ -6,6 +6,6 @@ public class PlayerItem : Item
     GameObject _bodyPartToBeAssigned;
     public void InstantiateItemOnPlayer()
     {
-        GameManager.instance.factoryHandler.InstantiateObject(itemSO.ItemPrefab, _bodyPartToBeAssigned);
+        GameManager.instance.factoryHandler.InstantiateObject(itemSO.itemPrefab, _bodyPartToBeAssigned);
     }
 }

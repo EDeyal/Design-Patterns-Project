@@ -13,7 +13,7 @@ public class Door : MonoBehaviour
 
     bool _canExitRoom = false;
     [SerializeField]
-    ItemSO ItemToExit;
+    ItemSO _itemToExit;
     public bool CanExitRoom => _canExitRoom;
     public void MoveToNextRoom()
     {
@@ -32,7 +32,7 @@ public class Door : MonoBehaviour
     {
         foreach (var item in GameManager.instance.player.Inventory)
         {
-            if (item == ItemToExit)
+            if (item == _itemToExit)
             {
                 _canExitRoom = true;
                 var animator = gameObject.GetComponent<Animator>();

@@ -7,8 +7,6 @@ public class Item : MonoBehaviour
     string _name;
     [SerializeField]
     ItemSO _itemSO;
-    [SerializeField]
-    bool _hasBeenUsed;
 
     #region Properties
     public ItemSO itemSO => _itemSO;

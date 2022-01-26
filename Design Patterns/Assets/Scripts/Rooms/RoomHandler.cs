@@ -18,7 +18,7 @@ public class RoomHandler: MonoBehaviour
         Room currentRoom;
         _rooms.TryGetValue(_currentRoomIndex, out currentRoom);
         CamPosition currentCamPos;
-        currentRoom.CamPositions.TryGetValue(0, out currentCamPos);
+        currentRoom.camPositions.TryGetValue(0, out currentCamPos);
         currentRoom.OnRoomEntry(currentCamPos);
     }
     public void MoveToNextRoom(Door exit)

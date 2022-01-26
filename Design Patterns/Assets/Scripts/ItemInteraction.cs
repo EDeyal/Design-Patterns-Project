@@ -16,8 +16,6 @@ public class ItemInteraction : MonoBehaviour ,IDragHandler, IEndDragHandler, IDr
         _canvasGroup.alpha = 0.8f;
         _canvasGroup.blocksRaycasts = false;
     }
-
-
     public void OnEndDrag(PointerEventData eventData)
     {
         ResetItemPos();

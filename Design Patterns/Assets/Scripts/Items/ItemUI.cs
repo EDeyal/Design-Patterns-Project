@@ -13,6 +13,6 @@ public class ItemUI : MonoBehaviour
     public void SetItemUI(ItemSO itemSO)
     {
         _itemSO = itemSO;
-        _image.sprite = itemSO.Sprite;
+        _image.sprite = itemSO.sprite;
     }
 }
